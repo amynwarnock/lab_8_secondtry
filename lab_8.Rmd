@@ -1,0 +1,16 @@
+---
+title: "lab_8"
+author: "Amy, Mandi, Marielena"
+date: "11/10/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      fig.width = 6.5,
+                      fig.height = 8)
+library(tidyverse)
+library(here)
+library(rio)
+library(janitor)
+```
