@@ -14,3 +14,11 @@ library(here)
 library(rio)
 library(janitor)
 ```
+
+### Load the data
+```{r}
+
+star <- read_csv(here("data", "star.csv"))
+
+```
+
