@@ -1,8 +1,9 @@
 ---
-title: "lab_8"
+title: "Lab 8"
 author: "Amy, Mandi, Marielena"
-date: "11/10/2021"
+date: "11/15/2021"
 output: pdf_document
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -11,14 +12,30 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.height = 8)
 library(tidyverse)
 library(here)
-library(rio)
-library(janitor)
 ```
 
-### Load the data
 ```{r}
+# Load the data
 
-star <- read_csv(here("data", "star.csv"))
+star <- read_csv(here("data", "star.csv"), show_col_types = FALSE)
 
 ```
 
+In this lab, we will use the `tidyverse` (@tidyverse) and `here` (@here) packages. We will also use `reader` by @readr and `ggplot2` by @ggplot2, both of which load automatically with the `tidyverse` package.
+
+```{r}
+# Code Chunk for Commit 3 
+
+
+```
+
+```{r}
+# Code Chunk for Commit 4
+
+
+```
+
+
+\newpage
+
+# References
