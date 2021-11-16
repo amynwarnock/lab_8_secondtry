@@ -1,15 +1,15 @@
 ---
 title: "Lab 8"
 author: "Amy, Mandi, Marielena"
-date: "11/15/2021"
-output:
-  html_document:
-    df_print: paged
+date: "11/16/2021"
+output: pdf_document
 bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE,
                       fig.width = 6.5,
                       fig.height = 8)
 library(tidyverse)
