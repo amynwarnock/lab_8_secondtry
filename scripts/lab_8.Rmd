@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.height = 8)
 library(tidyverse)
 library(here)
+library(knitr)
 ```
 
 ```{r}
@@ -25,7 +26,12 @@ In this lab, we will use the `tidyverse` (@tidyverse) and `here` (@here) package
 
 ```{r}
 # Code Chunk for Commit 3 
-
+star %>%
+  group_by(sex, frl) %>%
+  summarize(math_mean = mean(tmathss), math_sd = sd(tmathss), rdg_mean = mean(treadss), rdg_sd = sd(treadss)) %>%
+    kable(col.names= c("sex", "frl", "math_mean", "math_sd", "rdg_mean", "rdg_sd"),
+        digits = 2,
+        booktabs = FALSE)
 
 ```
 
