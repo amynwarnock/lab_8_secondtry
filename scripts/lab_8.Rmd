@@ -2,7 +2,9 @@
 title: "Lab 8"
 author: "Amy, Mandi, Marielena"
 date: "11/15/2021"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 bibliography: references.bib
 ---
 
@@ -35,10 +37,23 @@ star %>%
 
 ```
 
+Below is the graph that shows relationship between teacher experience and math scores with regression lines displaying lunch status as free/reduced vs. paid lunch.
+
 ```{r}
 # Code Chunk for Commit 4
 
-
+starr <- ggplot(star, aes(totexp, tmathss, color = frl)) +
+  geom_point() +
+  geom_smooth(method = lm) +
+  labs(x = "Teacher Experience (years)",
+       y = "Total Math Scale Score",
+       title = "Relationship between teacher experience and math scores", subtitle = "Separate regression lines displayed by free/reduced price lunch status") +
+  labs(color = "Lunch status") +
+  theme(legend.position="bottom")
+ 
+starr +
+  scale_color_manual(labels = c("Free/Recuced Price Meals","Paid Meals"),
+                     values = c("red", "blue"))
 ```
 
 
